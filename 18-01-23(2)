@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);        
+        float x = scan.nextFloat();
+        float y = scan.nextFloat();
+        float z = scan.nextFloat();
+        double mean = (x+y+z)/3;
+        mean = mean*Math.pow(10,1);
+        mean = Math.floor(mean);
+        mean = mean / Math.pow(10,1);
+        System.out.format("%.1f",mean);
+    }
+}           
