@@ -1,0 +1,17 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+    int x = sc.nextInt();
+    double a = Math.sqrt(x);
+    if(a%1 ==0){
+        System.out.println("Perfect Square");
+    }
+    else{
+        System.out.println("Not Perfect Square");
+    }
+    }
+}
