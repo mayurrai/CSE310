@@ -1,0 +1,20 @@
+import java.util.*;
+public class solution{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int x = scan.nextInt();
+        int y = scan.nextInt();
+        if (x>0 && x<127 && y>0 && y<127) {
+            while(x>y) {
+                y=y<<1;
+            }
+            if(x==y) 
+                System.out.println("Yes");
+            else 
+                System.out.println("No");
+        }
+        else {
+            System.out.println("Invalid");
+        }
+    }
+}
