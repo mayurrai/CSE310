@@ -1,0 +1,14 @@
+import java.util.*;
+public class hackerrank {
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int t= sc.nextInt();
+        double price = t + t*0.18;
+        if(t%1==0)
+            if(t>450)
+                System.out.println(price);
+            else
+                System.out.println("Invalid Input");
+    }
+}
