@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        float a = scan.nextFloat();
+        if(a<=5){
+            System.out.println("thanks");
+        }
+        else
+            System.out.println("101");
+        scan.close();
+    }
+}
