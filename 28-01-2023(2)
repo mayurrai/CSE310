@@ -1,0 +1,16 @@
+import java.util.*;
+public class phone_number{
+public static void main(String[] args) {
+Scanner scan = new Scanner(System.in);
+long a = scan.nextLong();
+String s=String.valueOf(a);
+if(s.length()==12){
+    if(s.matches("91(.*)")){
+        System.out.println("Number Saved");
+}
+}
+else
+    System.out.println("Enter Valid Number");
+scan.close();
+}  
+}
