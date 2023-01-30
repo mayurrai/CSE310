@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class day11i {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        if(x > 0){
+            for(int i=x; i>0; i--){
+                for (int j=i; j>0; j--){
+                    System.out.print("@");
+                }
+                System.out.println();
+            }
+        }
+        else {
+            System.out.println("Invalid Rows");
+        }
+    }
+}
