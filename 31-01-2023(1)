@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class hackerrank {    
+public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        String a = scan.nextLine();
+        String b = scan.nextLine();
+        String c = scan.nextLine();
+        int x = a.length();
+        int y = b.length();
+        int z = c.length();
+        if(x >= 50 || y >= 50||z>=50){
+            System.exit(0);
+        }
+        else if(x==y& y==z){
+            System.out.println("-1");
+        }
+        else{
+            if( x >= y && x >= y){
+                System.out.println(x);
+            }
+            else if (y >= x && y >= z)
+                System.out.println(y);
+
+            else
+                System.out.println(z);
+        }
+        scan.close();
+
+    }
+}
