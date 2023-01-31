@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class solution{    
+public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        int x = scan.nextInt();
+        int digit = 0;
+    if(x<0){
+        System.exit(0);
+    }
+    else{
+        while(x != 0)
+        {
+            int n = x % 10;
+            digit++;
+            x = x / 10;
+        }
+        System.out.print(digit);
+    }
+        scan.close();
+
+    }
+}
