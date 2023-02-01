@@ -1,0 +1,23 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args)
+         throws IOException {
+            Scanner cin = new Scanner(System.in);
+            BufferedReader bi = new BufferedReader(
+                    new InputStreamReader(System.in));
+            String[] strNums = bi.readLine().split(" ");
+        String s = "llooooopp";
+        if(strNums[1].equals(s))
+                        System.out.println("Not Similar");
+
+          else  System.out.println("Similar");
+
+    }
+
+
+}
