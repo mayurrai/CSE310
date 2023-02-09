@@ -1,0 +1,18 @@
+import java.util.*;
+public class hackerrank {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String day = scan.nextLine();
+        if(day.matches("Saturday")){
+            System.out.println("9:30 4:30");
+        }
+        else if(day.matches("Sunday"))  {
+            System.out.println("Library is closed");
+        }
+        else{
+            System.out.println("8:30 5:30");
+        }
+        scan.close();
+        }
+    }
+   
