@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class hackerrank {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int temp;   
+        int[] arr = new int[10];    
+        for(int i =0; i<10;i++){             
+            arr[i]=scn.nextInt();
+        }
+        for(int m=0;m<arr.length;m++){
+            for(int n=m+1;n<arr.length;n++){
+                if(arr[m]>arr[n]){
+                    temp = arr[m];
+                    arr[m]=arr[n];
+                    arr[n]=temp;
+                }
+            }
+        }
+        for(int t: arr){
+            System.out.print(t+" ");
+        }  
+        scn.close();     
+    }
+}
