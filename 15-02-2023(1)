@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String s;
+        int reg;
+        if(n == 1) {
+            s  = sc.next();
+            reg = sc.nextInt();
+            while(reg <= 0) {
+                s  = sc.next();
+                reg = sc.nextInt();
+            }
+            System.out.println(s+","+reg);
+        }
+        else if(n == 2) {
+            System.out.println("null,0");
+        }
+        else {
+            System.out.println("Wrong Choice");
+        }
+        sc.close();
+    }
+}
