@@ -1,0 +1,48 @@
+
+import java.util.*;
+
+
+class Student{
+      int reg;
+      String name;
+
+      void add1(int a,int b){
+           reg=a+b;
+           System.out.println(reg);
+      }
+
+      void add2(String s1, String s2){
+            name=s1+s2;
+            System.out.println(name);
+      }
+}
+
+public class Que{
+
+
+      public static void main(String[] args) {
+            Scanner s = new Scanner(System.in);
+
+            Student s1=new Student();
+            int n=s.nextInt();
+            if(n==1){
+                  int x=s.nextInt();
+                  int y=s.nextInt();
+                  s1.add1(x,y);
+                
+            }
+
+            else if(n==2){
+                  String x=s.next();
+                  String y=s.next();
+
+                  s1.add2(x,y);
+            }
+            else{
+                  System.out.println("ERROR");
+            }
+         
+            s.close();
+      }
+
+}
