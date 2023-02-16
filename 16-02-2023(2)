@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        Double radius = sc.nextDouble();
+        Double cylinder_radius = sc.nextDouble();
+        Double cylinder_height = sc.nextDouble();
+        int len = sc.nextInt();
+        int width = sc.nextInt();
+        int height = sc.nextInt();
+        if(radius < 1.00 || cylinder_radius < 1.00 || cylinder_height < 1.00 || len < 1 || width < 1 || height < 1) {
+            System.out.println("invalid input");
+            System.exit(0);
+        }
+        Double vs = (4/3)*(3.14)*(radius*radius*radius);
+        Double vcy = (3.14)*(cylinder_radius*cylinder_radius)*(cylinder_height);
+        int vr = len*width*height;
+        System.out.println(vs);
+        System.out.println(vcy);
+        System.out.println(vr);
+        sc.close();
+    }
+}
