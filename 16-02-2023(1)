@@ -1,0 +1,37 @@
+import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class Solution {
+
+    public static void main(String[] args)
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        throws IOException 
+    {
+        Scanner sc = new Scanner(System.in);
+        BufferedReader bi = new BufferedReader(new InputStreamReader(System.in));
+        int a=0,b=0,c=0,d=0;
+        int num1[] = new int[2];
+        int num2[] = new int[2];
+        String[] strNums1;
+        String[] strNums2;
+        strNums1 = bi.readLine().split(" ");
+        strNums2 = bi.readLine().split(" ");
+        
+        for (int i = 0; i < strNums1.length; i++) {
+            num1[i] = Integer.parseInt(strNums1[i]);
+        }
+        for (int i = 0; i < strNums2.length; i++) {
+            num2[i] = Integer.parseInt(strNums2[i]);
+        }
+        a = num1[0];
+        b = num1[1];
+        c = num2[0];
+        d = num2[1];
+        int real = (a*c)-(b*d);
+        int img = (a*d)+(b*c);
+        System.out.println(real+"+"+img+"i");
+        sc.close();
+    }
+}
