@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    
+    static boolean isNumber(String s)
+    {
+        for (int i = 0; i < s.length(); i++)
+            if (Character.isDigit(s.charAt(i)) == false)
+                return false;
+ 
+        return true;
+    }
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        String str1 = sc.next();
+        String str2 = sc.next();
+        
+        if(isNumber(str1)) {
+            System.out.println("Unknown");
+        }
+        else {
+            System.out.println(str1);
+        }
+        if(isNumber(str2)) {
+            System.out.println("Unknown");
+        }
+        else {
+            System.out.println(str2);
+        }
+        sc.close();
+    }
+}
