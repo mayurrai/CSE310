@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] trees = new int[10];
+        for (int i = 0; i < 10; i++) {
+            trees[i] = sc.nextInt();
+        }
+        boolean swapped;
+        do {
+            swapped = false;
+            for (int i = 0; i < trees.length - 1; i++) {
+                if (trees[i] > trees[i + 1]) {
+                    int temp = trees[i];
+                    trees[i] = trees[i + 1];
+                    trees[i + 1] = temp;
+                    swapped = true;
+                }
+            }
+        } while (swapped);
+        for (int i = 0; i < trees.length; i++) {
+            System.out.print(trees[i] + " ");
+        }
+    }
+}
