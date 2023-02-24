@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        Boolean result = check(n);
+        if (result == null) {
+            System.out.println("Invalid Input");
+        } else if (result) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
+    }
+
+    public static Boolean check(int n) {
+        if (n < 20 || n > 400) {
+            return null;
+        }
+        if (n % 2 == 0 && n % 3 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
