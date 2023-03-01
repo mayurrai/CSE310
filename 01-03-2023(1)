@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class WordCount {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String statement = scanner.nextLine();
+        int N = scanner.nextInt();
+
+        if (N > 10) {
+            System.out.println("Invalid Input");
+        } else {
+            String[] words = statement.split(" ");
+            int count = 0;
+            for (String word : words) {
+                if (word.length() == N) {
+                    count++;
+                }
+            }
+            System.out.println(count);
+        }
+    }
+}
