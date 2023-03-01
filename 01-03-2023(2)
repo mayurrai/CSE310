@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class Solution 
+{
+    public static void main(String[] args) 
+    {
+        String inp = new Scanner(System.in).nextLine();
+        
+        System.out.println((inp.matches("^[A-Za-z0-9][A-Za-z0-9\\.]*(?:@){1}(g(ma)(i){1}l)\\.com$") ? "valid\n" : "invalid\n") + inp.indexOf("@"));
+    }
+}
