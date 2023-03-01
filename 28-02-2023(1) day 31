@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+                Scanner sc = new Scanner(System.in);
+        String word1 = sc.nextLine();
+        String word2 = sc.nextLine();
+        String result = wordFormationGame(word1, word2);
+        System.out.println(result);
+    }
+    
+    public static String wordFormationGame(String word1, String word2) {
+        if (word1.length() < 3 || word2.length() < 3) {
+            return "ERROR";
+        }
+        
+        if (word1.substring(0, 3).equals(new StringBuilder(word2.substring(word2.length() - 3)).reverse().toString())) {
+            return "GREAT";
+        } else {
+            return "TRY NEXT TIME";
+        }
+    }
+}
