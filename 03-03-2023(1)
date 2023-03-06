@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String substr = sc.nextLine().trim();
+        String essay = sc.nextLine().trim();
+        int count = countSubstring(essay, substr);
+        System.out.println(count);
+    }
+    private static int countSubstring(String str, String substr) {
+        int count = 0;
+        int pos = 0;
+        while ((pos = str.indexOf(substr, pos)) != -1) {
+            count++;
+            pos += substr.length();
+        }
+        return count;
+    }
+}
