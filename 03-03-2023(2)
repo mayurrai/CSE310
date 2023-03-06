@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String num1 = sc.nextLine().trim();
+        String num2 = sc.nextLine().trim();
+        if (num1.length() < 10 || num1.length() > 20 || num2.length() < 10 || num2.length() > 20) {
+            System.out.println("Invalid Input");
+            System.exit(0);
+        }
+        if (num1.length() < num2.length()) {
+            num1 = padWithZeroes(num1, num2.length() - num1.length());
+        } else {
+            num2 = padWithZeroes(num2, num1.length() - num2.length());
+        }
+        int carry = 0;
+        StringBuilder result = new StringBuilder();
+        for (int i = num1.length() - 1; i >= 0; i--) {
+            int digitSum = Character.getNumericValue(num1.charAt(i)) + Character.getNumericValue(num2.charAt(i)) + carry;
+            if (digitSum > 9) {
+                carry = 1;
+                digitSum -= 10;
+            } else {
+                carry = 0;
+            }
+            result.append(digitSum);
+        }
+        if (carry == 1) {
+            result.append('1');
+        }
+        System.out.println(result.reverse().toString());
+    }
+    private static String padWithZeroes(String str, int count) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < count; i++) {
+            sb.append('0');
+        }
+        sb.append(str);
+        return sb.toString();
+    }
+}
