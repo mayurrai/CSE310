@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner s=new Scanner(System.in);
+        String str=s.next();
+        int c=0;
+        if(str.length()<=3){
+            System.out.println("Invalid");
+            System.exit(0);
+        }
+        char c2[]=str.toCharArray();
+        char c1=s.next().charAt(0);
+        for(char i: c2){
+            if(i==c1) c+=1;
+        }
+        System.out.println(c);
+        
+    }
+}
