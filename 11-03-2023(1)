@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class MaxCharFinder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        char maxChar = getMaxOccurringChar(str);
+        System.out.println("Maximum occurring character is " + maxChar);
+        scanner.close();
+    }
+
+    public static char getMaxOccurringChar(String str) {
+        int[] charFreq = new int[256]; 
+        for (int i = 0; i < str.length(); i++) {
+            charFreq[str.charAt(i)]++;
+        }
+
+        char maxChar = ' ';
+        int maxFreq = 0;
+        for (int i = 0; i < charFreq.length; i++) {
+            if (charFreq[i] > maxFreq) {
+                maxChar = (char) i;
+                maxFreq = charFreq[i];
+            }
+        }
+
+        return maxChar;
+    }
+}
