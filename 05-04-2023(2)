@@ -1,0 +1,81 @@
+import java.util.Scanner;
+
+class Person {
+
+    int age;
+
+    
+
+    Person(int age) {
+
+        if (age < 0) {
+
+            this.age = 18; // default age
+
+        } else {
+
+            this.age = age;
+
+        }
+
+    }
+
+}
+
+@FunctionalInterface
+
+interface PersonFinder {
+
+    void find(Person[] p);
+
+}
+
+public class Demo {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        if (n < 1) {
+
+            System.out.println("Invalid input");
+
+            return;
+
+        }
+
+        Person[] persons = new Person[n];
+
+        for (int i = 0; i < n; i++) {
+
+            int age = sc.nextInt();
+
+            persons[i] = new Person(age);
+
+        }
+
+        PersonFinder finder = (p) -> {
+
+            int count = 0;
+
+            for (Person person : p) {
+
+                if (person.age > 25) {
+
+                    count++;
+
+                }
+
+            }
+
+            System.out.println(count);
+
+        };
+
+        finder.find(persons);
+
+    }
+
+}
