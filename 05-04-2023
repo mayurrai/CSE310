@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+@FunctionalInterface
+
+interface StringValidator {
+
+    boolean valid(String str, int n);
+
+}
+
+public class Demo {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+
+        int n = sc.nextInt();
+
+        if (n < 1) {
+
+            System.out.println("Invalid input");
+
+            return;
+
+        }
+
+        StringValidator validator = (s, len) -> s.length() > len;
+
+        if (validator.valid(str, n)) {
+
+            System.out.println("Valid string");
+
+        } else {
+
+            System.out.println("Invalid string");
+
+        }
+
+    }
+
+}
