@@ -1,22 +1,14 @@
 import java.util.Scanner;
 import java.util.function.Function;
 import java.util.function.Predicate;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String inputString = sc.nextLine();
-
-        // Lambda expression to reverse the input string
         Function<String, String> reverseString = str -> new StringBuilder(str).reverse().toString();
-
-        // Lambda expression to check if the input string is a palindrome
         Predicate<String> isPalindrome = str -> str.equals(reverseString.apply(str));
-
-        // Testing the lambda expressions
         String reversedString = reverseString.apply(inputString);
         boolean palindrome = isPalindrome.test(inputString);
-
         System.out.println(reversedString);
         System.out.println(palindrome);
     }
