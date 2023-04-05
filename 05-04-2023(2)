@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.function.Function;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String inputString = sc.nextLine();
+      Function<String, Integer> countVowels = str -> {
+            int count = 0;
+            for (char c : str.toCharArray()) {
+                if ("AEIOUaeiou".indexOf(c) != -1) {
+                    count++;
+                }
+            }
+            return count;
+        };
+        int vowelCount = countVowels.apply(inputString);
+        System.out.println(vowelCount);
+    }
+}
