@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+class omen extends Exception
+{
+    String Message;
+    omen(String msg)
+    {
+        System.out.print(msg);
+    }
+}
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String like = sc.nextLine();
+        try
+        {
+        if(like.equals("No"))throw new omen("intersted only in menz shopping");
+            if(like.equals("Yes"))
+            {
+                System.out.println("welcome to ladies or kids section");
+            }
+            else
+            {
+                System.out.println("invalid input");
+            }
+            
+            
+        }
+        catch( omen o)
+        {
+            
+        }
+    }
+}
