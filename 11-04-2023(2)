@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+class omen extends Exception
+{
+    String Message;
+    omen(String msg)
+    {
+        System.out.print(msg);
+    }
+}
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Float a = sc.nextFloat();
+        Float b = sc.nextFloat();
+        try
+        {
+            if(b==0.0) throw new omen("Infinity");
+            else
+            {
+                System.out.println(a/b);
+            }
+            
+            
+        }
+        catch( omen o)
+        {
+            
+        }
+    }
+}
